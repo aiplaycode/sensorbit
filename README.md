@@ -1,3 +1,3 @@
-# Emakefun micorbit ph2.0 sensorbit extensions
+# Micorbit ph2.0 sensorbit extensions
 
 # FOR PLAYCODE IOT MAKER KIT
