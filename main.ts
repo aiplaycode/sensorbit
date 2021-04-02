@@ -64,50 +64,50 @@ enum _selectpin {
     Dpin = 2,
 }
 
-enum RemoteButton {
-    //% block=A
-    A = 0x45,
-    //% block=B
-    B = 0x46,
-    //% block=C
-    C = 0x47,
-    //% block=D
-    D = 0x44,
-    //% block=UP
-    UP = 0x40,
-    //% block=+
-    Add = 0x43,
-    //% block=LEFT
-    Left = 0x07,
-    //% block=OK
-    Ok = 0x15,
-    //% block=RIGHT
-    Right = 0x09,
-    //% block=DOWN
-    Down = 0x19,
-    //% block=-
-    EQ = 0x0d,
-    //% block=0
-    NUM0 = 0x16,
-    //% block=1
-    NUM1 = 0x0c,
-    //% block=2
-    NUM2 = 0x18,
-    //% block=3
-    NUM3 = 0x5e,
-    //% block=4
-    NUM4 = 0x8,
-    //% block=5
-    NUM5 = 0x1c,
-    //% block=6
-    NUM6 = 0x5a,
-    //% block=7
-    NUM7 = 0x42,
-    //% block=8
-    NUM8 = 0x52,
-    //% block=9
-    NUM9 = 0x4A,
-}
+// enum RemoteButton {
+//     //% block=A
+//     A = 0x45,
+//     //% block=B
+//     B = 0x46,
+//     //% block=C
+//     C = 0x47,
+//     //% block=D
+//     D = 0x44,
+//     //% block=UP
+//     UP = 0x40,
+//     //% block=+
+//     Add = 0x43,
+//     //% block=LEFT
+//     Left = 0x07,
+//     //% block=OK
+//     Ok = 0x15,
+//     //% block=RIGHT
+//     Right = 0x09,
+//     //% block=DOWN
+//     Down = 0x19,
+//     //% block=-
+//     EQ = 0x0d,
+//     //% block=0
+//     NUM0 = 0x16,
+//     //% block=1
+//     NUM1 = 0x0c,
+//     //% block=2
+//     NUM2 = 0x18,
+//     //% block=3
+//     NUM3 = 0x5e,
+//     //% block=4
+//     NUM4 = 0x8,
+//     //% block=5
+//     NUM5 = 0x1c,
+//     //% block=6
+//     NUM6 = 0x5a,
+//     //% block=7
+//     NUM7 = 0x42,
+//     //% block=8
+//     NUM8 = 0x52,
+//     //% block=9
+//     NUM9 = 0x4A,
+// }
 
 
 enum IrPins {
@@ -214,6 +214,52 @@ enum Select {
     _off = 1,
     //% block="clear"
     _clear = 2,
+}
+
+enum Mode {
+    //% block="LOOP"
+    LOOP_MODE = 0,        // 循环模式
+    //% block="BUTTON"
+    BUTTON_MODE = 1,      // 按键模式
+    //% block="KEYWORDS"
+    KEYWORDS_MODE = 2,    // 关键字模式
+    //% block="KEYWORDS_AND"
+    KEYWORDS_AND_BUTTON = 3, //关键字加按键模式
+}
+
+enum barb_fitting {
+    //% block="LEFT"
+    BUTOON_LEFT = 0,
+    //% block="RIGHT" 
+    BUTOON_RIGHT = 1,
+    //% block="UP"
+    BUTOON_UP = 2, 
+    //% block="DOWN"
+    BUTOON_DOWN = 3, 
+    //% block="BUTTON"
+    JOYSTICK_BUTTON = 4,
+}
+
+enum key_status {
+    //% block="DOWN"
+    PRESS_DOWN = 0,   //按下
+    //% block="UP"
+    PRESS_UP = 1,    //释放
+    //% block="CLICK1"
+    SINGLE_CLICK = 3,     //单击
+    //% block="CLICK2"
+    DOUBLE_CLICK = 4,    //双击
+    //% block="HOLD"
+    LONG_PRESS_HOLD = 6,    //长按
+    //% block="PRESS"
+    NONE_PRESS = 8,      //未按
+}
+
+enum Shaft{
+    //% block="X"
+    X_Shaft = 0,
+    //% block="Y"
+    Y_Shaft = 1,
 }
 
 //% color="#FFA500" weight=10 icon="\uf2c9" block="Sensor:bit"
@@ -975,38 +1021,38 @@ namespace sensors {
         return row
     }
 
-    let _Apin = 0
-    let _Dpin = 0
-    let _Bpin = 0
+    // let _Apin = 0
+    // let _Dpin = 0
+    // let _Bpin = 0
 
-    //% blockId=rotaryEncoder block="rotaryEncoder setup | pinA %pina|pinB %pinb|pinD %pind"   group="旋转编码器"
-    //% weight=70
-    //% subcategory="基础输入模块"
-    export function rotaryEncoder(pina: DigitalPin, pinb: DigitalPin, pind: DigitalPin): void {
-        _Apin = pina
-        _Bpin = pinb
-        _Dpin = pind
-    }
+    // //% blockId=rotaryEncoder block="rotaryEncoder setup | pinA %pina|pinB %pinb|pinD %pind"   group="旋转编码器"
+    // //% weight=70
+    // //% subcategory="基础输入模块"
+    // export function rotaryEncoder(pina: DigitalPin, pinb: DigitalPin, pind: DigitalPin): void {
+    //     _Apin = pina
+    //     _Bpin = pinb
+    //     _Dpin = pind
+    // }
 
-    //% blockId=pinsRead block="select pin  %selectpin"  group="旋转编码器"
-    //% weight=69
-    //% subcategory="基础输入模块"
-    export function pinsRead(selectpin: _selectpin): number {
-        let a
-        if (selectpin == 0)
-            a = _Apin
-        else if (selectpin == 1)
-            a = _Bpin
-        else if (selectpin == 2)
-            a = _Dpin
-        pins.digitalWritePin(a, 0)
-        if (pins.digitalReadPin(a) == 1) {
-            return 1;
-        } else {
-            return 0;
-        }
-        //return pins.digitalReadPin(a)
-    }
+    // //% blockId=pinsRead block="select pin  %selectpin"  group="旋转编码器"
+    // //% weight=69
+    // //% subcategory="基础输入模块"
+    // export function pinsRead(selectpin: _selectpin): number {
+    //     let a
+    //     if (selectpin == 0)
+    //         a = _Apin
+    //     else if (selectpin == 1)
+    //         a = _Bpin
+    //     else if (selectpin == 2)
+    //         a = _Dpin
+    //     pins.digitalWritePin(a, 0)
+    //     if (pins.digitalReadPin(a) == 1) {
+    //         return 1;
+    //     } else {
+    //         return 0;
+    //     }
+    //     //return pins.digitalReadPin(a)
+    // }
 
 
     let Xpin = 0
@@ -1388,6 +1434,8 @@ namespace sensors {
         pins.digitalWritePin(pin, 1);
         control.waitMicros(50);
         pins.digitalWritePin(pin, 0);
+	    control.waitMicros(1000);
+        while(!pins.digitalReadPin(pin));
         // read pulse
         let d = pins.pulseIn(pin, PulseValue.High, 25000);
         let ret = d;
@@ -1396,9 +1444,11 @@ namespace sensors {
             ret = distanceBuf;
         }
         distanceBuf = d;
+        //return d;
         return Math.floor(ret * 9 / 6 / 58);
         //return Math.floor(ret / 40 + (ret / 800));
         // Correction
+
     }
 
     function RgbDisplay(indexstart: number, indexend: number, rgb: RgbColors): void {
@@ -1408,25 +1458,25 @@ namespace sensors {
         emRGBLight.show();
     }
 
-    //% blockId="motorbit_rus04" block="part %index show color %rgb effect %effect rgbpin %pin"  group="RGB超声波"
-    //% weight=75
-    //% inlineInputMode=inline
-    //% subcategory="传感器"
-    export function sensorbit_rus04(pin: DigitalPin, index: RgbUltrasonics, rgb: RgbColors, effect: ColorEffect): void {
-        let start, end;
+    export function rus04_rgb(pin: DigitalPin, offset: number, index: number, rgb: number, effect: number): void {
+        let start = 0, end = 0;
         if (!emRGBLight) {
-            emRGBLight = EMRGBLight.create(pin, 6, EMRGBPixelMode.RGB)
+            emRGBLight = EMRGBLight.create(pin, offset+6, EMRGBPixelMode.RGB)
         }
-        if (index == RgbUltrasonics.Left) {
-            start = 0;
-            end = 2;
-        } else if (index == RgbUltrasonics.Right) {
-            start = 3;
-            end = 5;
-        } else if (index == RgbUltrasonics.All) {
-            start = 0;
-            end = 5;
+        if(offset>=4){
+            if (index == RgbUltrasonics.Left) {
+                start = 0;
+                end = 2;
+            } else if (index == RgbUltrasonics.Right) {
+                start = 3;
+                end = 5;
+            } else if (index == RgbUltrasonics.All) {
+                start = 0;
+                end = 5;
+            }
         }
+        start += offset;
+        end += offset;
         switch (effect) {
             case ColorEffect.None:
                 RgbDisplay(start, end, rgb);
@@ -1488,6 +1538,14 @@ namespace sensors {
                 }
                 break;
         }
+    }
+
+    //% blockId="motorbit_rus04" block="part %index show color %rgb effect %effect rgbpin %pin"  group="RGB超声波"
+    //% weight=75
+    //% inlineInputMode=inline
+    //% subcategory="传感器"
+    export function sensorbit_rus04(pin: DigitalPin, index: RgbUltrasonics, rgb: RgbColors, effect: ColorEffect): void {
+        rus04_rgb(pin, 0, index, rgb, effect);
     }
 
     /**
@@ -1695,6 +1753,210 @@ namespace sensors {
                 return 0;
         }
     }
+
+    let VOICE_RESET_REG = 0x5;
+    let VOICE_IIC_ADDR = 0x79;
+    let VOICE_ADD_WORDS_REG = 0x04;
+    let VOICE_ASR_START_REG = 0x6;
+    let VOICE_RESULT_REG = 0;
+    let VOICE_CONFIG_TIME_REG = 0x3;
+
+    function i2cwrite(addr: number, reg: number, value: number) {
+        let buf = pins.createBuffer(2)
+        buf[0] = reg
+        buf[1] = value
+        pins.i2cWriteBuffer(addr, buf)
+    }
+
+    function i2cwrite1(addr: number, reg: number, value: number ,value1: string) {
+        let lengths = value1.length
+        let buf = pins.createBuffer(2+lengths)
+        //let arr = value1.split('')
+        buf[0] = reg 
+        buf[1] = value
+        let betys = []
+        betys = stringToBytes(value1)
+        for (let i = 0; i < betys.length; i++) {
+            buf[2+i] = betys[i]
+        }
+        pins.i2cWriteBuffer(addr, buf)
+    }
+    
+    function i2ccmd(addr: number, value: number) {
+        let buf = pins.createBuffer(1)
+        buf[0] = value
+        pins.i2cWriteBuffer(addr, buf)
+    }
+    
+    function i2cread(addr: number, reg: number) {
+        pins.i2cWriteNumber(addr, reg, NumberFormat.UInt8BE);
+        let val = pins.i2cReadNumber(addr, NumberFormat.UInt8BE);
+        return val;
+    }
+
+    //% blockId="Speech_recognition_reset" block="Voice recognition module for reset"  group="语音识别模块"
+    //% subcategory="智能模块"
+    //% inlineInputMode=inline
+    export function Speech_recognition_reset(): void {
+        i2ccmd(VOICE_IIC_ADDR,VOICE_RESET_REG)
+        basic.pause(300)
+    }
+
+    //% blockId="Speech_recognition_mode" block="The voice recognition mode is set to %Mode"  group="语音识别模块"
+    //% subcategory="智能模块"
+    //% inlineInputMode=inline
+    export function Speech_recognition_mode(Mode : Mode): void {
+        i2cwrite(VOICE_IIC_ADDR,VOICE_RESET_REG,Mode)
+        basic.pause(300)
+    }
+
+    //% blockId="Speech_recognition_glossary" block="Voice recognition to set the word number %word_number|Word content %word_content"  group="语音识别模块"
+    //% subcategory="智能模块"
+    //% inlineInputMode=inline
+    export function Speech_recognition_glossary(word_number : number, word_content : string): void {
+        i2cwrite1(VOICE_IIC_ADDR, VOICE_ADD_WORDS_REG, word_number,word_content)
+        basic.pause(300)
+    }
+
+    //% blockId="Speech_recognition_start" block="Voice recognition starts to recognize"  group="语音识别模块"
+    //% subcategory="智能模块"
+    //% inlineInputMode=inline
+    export function Speech_recognition_start(): void {
+        i2ccmd(VOICE_IIC_ADDR,VOICE_ASR_START_REG)
+        basic.pause(300)
+    }
+
+    //% blockId="Speech_recognition_get_result" block="Speech recognition to get the corresponding number of the recognized words"   group="语音识别模块"
+    //% subcategory="智能模块"
+    //% inlineInputMode=inline
+    export function Speech_recognition_get_result(): number {
+       let result =i2cread(VOICE_IIC_ADDR,VOICE_RESULT_REG)
+       return result;
+    }
+
+    //% blockId="Speech_recognition_time" block="Voice recognition to set wake-up time %time"  group="语音识别模块"
+    //% subcategory="智能模块"
+    //% inlineInputMode=inline
+    export function Speech_recognition_time(time : number): void {
+        i2cwrite(VOICE_IIC_ADDR,VOICE_CONFIG_TIME_REG,time)
+        basic.pause(300)
+    }
+
+    function stringToBytes (str : string) {  
+
+        
+        let ch = 0;
+        let st = 0;
+        let gm:number[]; 
+        gm = [];
+        for (let i = 0; i < str.length; i++ ) { 
+            ch = str.charCodeAt(i);  
+            st = 0 ;                 
+
+           do {  
+                st = ( ch & 0xFF );  
+                ch = ch >> 8;   
+                gm.push(st);        
+            }    
+
+            while ( ch );  
+            
+        }  
+        return gm;  
+    } 
+
+    let JOYSTICK_I2C_ADDR = 0x5A;
+    let JOYSTICK_LEFT_X_REG = 0x10;
+    let JOYSTICK_LEFT_Y_REG = 0x11;
+
+    let BUTOON_LEFT_REG = 0x24;
+    let BUTOON_RIGHT_REG = 0x23;
+    let BUTOON_UP_REG = 0x22;
+    let BUTOON_DOWN_REG = 0x21;
+    let JOYSTICK_BUTTON_REG = 0x20;
+    let NONE_PRESS = 8;
+
+    function Get_Button_Status (button : number){
+        switch(button) {
+            case 0: 
+                return i2cread(JOYSTICK_I2C_ADDR,BUTOON_LEFT_REG);
+            case 1: 
+                return i2cread(JOYSTICK_I2C_ADDR,BUTOON_RIGHT_REG);
+            case 2: 
+                return i2cread(JOYSTICK_I2C_ADDR,BUTOON_UP_REG);
+            case 3: 
+                return i2cread(JOYSTICK_I2C_ADDR,BUTOON_DOWN_REG);
+            case 4: 
+                return i2cread(JOYSTICK_I2C_ADDR,JOYSTICK_BUTTON_REG);
+            default:
+                return 0xff;
+        }
+    }
+
+    /**
+     * 游戏手柄
+     */
+    //% blockId=Gamepad_Press block="Gamepad buttons %button Is pressed？"  group="游戏手柄"
+    //% weight=74
+    //% subcategory="基础输入模块"
+    //% inlineInputMode=inline
+    export function Gamepad_Press(button: barb_fitting): boolean {
+        if(Get_Button_Status(button) != NONE_PRESS && Get_Button_Status(button) != 0xff)
+    {
+        return true;
+    }
+        return false;   
+    }
+
+    /**
+     * 游戏手柄
+     */
+    //% blockId=Gamepad_Release block="Gamepad buttons %button Is Released？"  group="游戏手柄"
+    //% weight=74
+    //% subcategory="基础输入模块"
+    //% inlineInputMode=inline
+    export function Gamepad_Release(button: barb_fitting): boolean {
+        if(Get_Button_Status(button) == NONE_PRESS)
+    {
+        return true;
+    }
+        return false;   
+    }
+
+    /**
+     * 游戏手柄
+     */
+    //% blockId=Gamepad_Shaft block="Game controller acquisition %shaft the value of"  group="游戏手柄"
+    //% weight=74
+    //% subcategory="基础输入模块"
+    //% inlineInputMode=inline
+    export function Gamepad_Shaft(shaft: Shaft): number { 
+        let value = 0;
+        if(shaft == 0){
+            value = i2cread(JOYSTICK_I2C_ADDR,JOYSTICK_LEFT_X_REG);
+        }
+        if(shaft == 1){
+            value = i2cread(JOYSTICK_I2C_ADDR,JOYSTICK_LEFT_Y_REG);
+        }
+        return value;
+    }
+
+    /**
+     * 游戏手柄
+     */
+    //% blockId=Gamepad_Status block="Button %button is it %status status?"  group="游戏手柄"
+    //% weight=74
+    //% subcategory="基础输入模块"
+    //% inlineInputMode=inline
+    export function Gamepad_Status(button : barb_fitting,status : key_status): boolean {
+        if(Get_Button_Status(button) == status)
+    {
+        return true;
+    }else{
+        return false;
+    }
+    }
+      
 
 
 
