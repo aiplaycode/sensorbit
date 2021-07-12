@@ -6,61 +6,61 @@ enum PingUnit {
 }
 
 enum RgbColors {
-    //% block=red
+    //% block="红",
     Red = 0xFF0000,
-    //% block=orange
+    //% block="橙"
     Orange = 0xFFA500,
-    //% block=yellow
+    //% block="黄"
     Yellow = 0xFFFF00,
-    //% block=green
+    //% block="绿"
     Green = 0x00FF00,
-    //% block=blue
+    //% block="蓝"
     Blue = 0x0000FF,
-    //% block=indigo
+    //% block="靛蓝"
     Indigo = 0x4b0082,
-    //% block=violet
+    //% block="紫罗兰"
     Violet = 0x8a2be2,
-    //% block=purple
+    //% block="紫"
     Purple = 0xFF00FF,
-    //% block=white
+    //% block="白"
     White = 0xFFFFFF,
-    //% block=black
+    //% block="黑"
     Black = 0x000000
 }
 
 enum RgbUltrasonics {
-    //% block=left
+    //% block="左边"
     Left = 0x00,
-    //% block=right
+    //% block="右边"
     Right = 0x01,
-    //% block=all
+    //% block="全部"
     All = 0x02
 }
 
 enum ColorEffect {
-    //% block=none
+    //% block="无"
     None = 0x00,
-    //% block=breathing
+    //% block="呼吸灯"
     Breathing = 0x01,
-    //% block=rotate
+    //% block="旋转流星"
     Rotate = 0x02,
-    //% block=flash
+    //% block="闪烁"
     Flash = 0x03
 }
 
 enum DHT11Type {
-    //% block="temperature(℃)" 
+    //% block="摄氏温度(℃)" 
     DHT11_temperature_C = 0,
-    //% block="humidity(0~100)"
+    //% block="湿度(0~100)"
     DHT11_humidity = 1,
 }
 
 enum _selectpin {
-    //% block="Apin"
+    //% block="引脚A"
     Apin = 0,
-    //% block="Bpin"
+    //% block="引脚B"
     Bpin = 1,
-    //% block="Dpin"
+    //% block="引脚D"
     Dpin = 2,
 }
 
@@ -97,9 +97,9 @@ enum IrPins {
 }
 
 enum _rockerpin {
-    //% block="Xpin"
+    //% block="引脚X"
     Xpin = 0,
-    //% block="Ypin"
+    //% block="引脚Y"
     Ypin = 1
 }
 
@@ -115,133 +115,133 @@ enum rotation_direction {
 }
 
 enum ledon_off {
-    //% block="on"
+    //% block="点亮"
     _on = 1,
-    //% block="off"
+    //% block="熄灭"
     _off = 0,
 }
 
 enum on_off {
 
-    //% block="on"
+    //% block="打开"
     _on = 1,
-    //% block="off"
+    //% block="关闭"
     _off = 0,
 }
 
 enum _selectlight {
-    //% block="_yellow"
+    //% block="黄灯"
     _yellow = 0,
-    //% block="_red"
+    //% block="红灯"
     _red = 1,
-    //% block="_green"
+    //% block="绿灯"
     _green = 2,
 }
 
 enum _selectcolor {
-    //% block="_blue"
+    //% block="蓝色"
     _blue = 0,
-    //% block="_red"
+    //% block="红色"
     _red = 1,
-    //% block="_green"
+    //% block="绿灯"
     _green = 2,
 }
 
 enum run_turn {
 
-    //% block="forward"
+    //% block="正转"
     forward = 0,
-    //% block="reverse"
+    //% block="反转"
     reverse = 1,
 }
 
 enum LcdBacklight {
-    //% block="on"
+    //% block="打开"
     _on = 1,
-    //% block="off"
+    //% block="关闭"
     _off = 0,
 }
 
 enum Item {
-    //% block="on"
+    //% block="打开"
     _on = 1,
-    //% block="off"
+    //% block="关闭"
     _off = 2,
-    //% block="clear"
+    //% block="清除"
     _clear = 3,
 }
 
 enum Select {
-    //% block="on"
+    //% block="打开"
     _on = 0,
-    //% block="off"
+    //% block="关闭"
     _off = 1,
-    //% block="clear"
+    //% block="清除"
     _clear = 2,
 }
 
 
 
 enum barb_fitting {
-    //% block="LEFT"
+    //% block="D"
     BUTOON_LEFT = 0,
-    //% block="RIGHT" 
+    //% block="B" 
     BUTOON_RIGHT = 1,
-    //% block="UP"
+    //% block="A"
     BUTOON_UP = 2, 
-    //% block="DOWN"
+    //% block="C"
     BUTOON_DOWN = 3, 
-    //% block="BUTTON"
+    //% block="摇杆按键"
     JOYSTICK_BUTTON = 4,
 }
 
 enum key_status {
-    //% block="DOWN"
+    //% block="按下"
     PRESS_DOWN = 0,   //按下
-    //% block="UP"
+    //% block="释放"
     PRESS_UP = 1,    //释放
-    //% block="CLICK1"
+    //% block="单击"
     SINGLE_CLICK = 3,     //单击
-    //% block="CLICK2"
+    //% block="双击"
     DOUBLE_CLICK = 4,    //双击
-    //% block="HOLD"
+    //% block="长按"
     LONG_PRESS_HOLD = 6,    //长按
-    //% block="PRESS"
+    //% block="未按"
     NONE_PRESS = 8,      //未按
 }
 
 enum Shaft{
-    //% block="X"
+    //% block="X轴"
     X_Shaft = 0,
-    //% block="Y"
+    //% block="Y轴"
     Y_Shaft = 1,
 }
 
 
 //% color="#FFA500" weight=10 icon="\uf2c9" block="Sensor:bit"
 namespace sensors {
-    //% blockId=actuator_buzzer0 block="actuator_buzzer0 pin ：%pin|status %status"   group="有源蜂鸣器"
+    //% blockId=actuator_buzzer0 block="有源蜂鸣器引脚%pin|状态 %status"   group="有源蜂鸣器"
     //% weight=70
     //% subcategory="执行器"
     export function actuator_buzzer0(pin: DigitalPin, status: on_off): void {
         pins.digitalWritePin(pin, status)
     }
 
-    //% blockId=actuator_buzzer1 block="actuator_buzzer1 pin ：%pin|freq %freq"   group="无源蜂鸣器"
+    //% blockId=actuator_buzzer1 block="无源蜂鸣器引脚%pin|频率 %freq"   group="无源蜂鸣器"
     //% weight=70
     //% subcategory="执行器"
     export function actuator_buzzer1(pin: AnalogPin, freq: number): void {
         pins.analogWritePin(pin, freq)
     }
 
-    //% blockId=actuator_relay block="actuator_relay pin ：%pin|status %status"   group="继电器"
+    //% blockId=actuator_relay block="继电器引脚%pin|状态 %status"   group="继电器"
     //% weight=70
     //% subcategory="执行器"
     export function actuator_relay(pin: DigitalPin, status: on_off): void {
         pins.digitalWritePin(pin, status)
     }
 
-    //% blockId=actuator_motor_run block="直流电机INA%INA |INB %INB运行模式%turn速度:%speed"  group="直流电机"
+    //% blockId=actuator_motor_run block="直流电机INA引脚%INA |INB引脚 %INB运行模式%turn速度:%speed"  group="直流电机"
     //% weight=70
     //% inlineInputMode=inline
     //% speed.min=0 speed.max=255
@@ -262,7 +262,7 @@ namespace sensors {
     /**
      * 舵机
      */
-    //% blockId=actuator_servo block="actuator_servo %pin|angle %angle"  group="舵机"
+    //% blockId=actuator_servo block="舵机引脚%pin|角度 %angle"  group="舵机"
     //% angle.min=0  angle.max=180
     //% weight=70
     //% inlineInputMode=inline
@@ -282,7 +282,7 @@ namespace sensors {
     /**
      * 激光模块
      */
-    //% blockId=actuator_laser block="actuator_laser pin ：%pin|status %status"   group="激光模块"
+    //% blockId=actuator_laser block="激光模块引脚%pin|状态 %status"   group="激光模块"
 	//% weight=70
 	//% subcategory="执行器"
     export function actuator_laser(pin: DigitalPin,status: on_off): void {
@@ -292,7 +292,7 @@ namespace sensors {
     let _SDO = 0
     let _SCL = 0
 
-    //% blockId=actuator_keyborad_pin block="actuator_keyborad_pin|SDOPIN %SDO|SCLPIN %SCL"   group="触摸键盘"
+    //% blockId=actuator_keyborad_pin block="触摸键盘SDO引脚 %SDO|SCL引脚 %SCL"   group="触摸键盘"
     //% weight=71
     //% subcategory="执行器"
     export function actuator_keyborad_pin(SDO: DigitalPin, SCL: DigitalPin): void {
@@ -301,7 +301,7 @@ namespace sensors {
         _SCL = SCL
     }
 
-    //% blockId=actuator_keyborad_read block="actuator_keyborad_read"   group="触摸键盘"
+    //% blockId=actuator_keyborad_read block="读取到的键盘值"   group="触摸键盘"
     //% weight=70
     //% subcategory="执行器"
     export function actuator_keyborad_read(): string {
@@ -339,7 +339,7 @@ namespace sensors {
         }
     }
 
-    //% blockId=setled block="set led ：%lpin|status %lstatus"   group="LED灯"
+    //% blockId=setled block="LED灯引脚%lpin|状态 %lstatus"   group="LED灯"
     //% weight=70
     //% subcategory="显示器"
     export function setled(lpin: DigitalPin, lstatus: ledon_off): void {
@@ -349,7 +349,7 @@ namespace sensors {
     let _Gpins = 0
     let _Bpins = 0
 
-    //% blockId=setrgbpin block="set RGBlight pin|g %_GPin|b %_BPin|r %_RPin"   group="三色灯"
+    //% blockId=setrgbpin block="RGB三色灯引脚绿(G) %GPin|蓝(B) %YPin|红(R) %RPin"   group="三色灯"
     //% weight=70
     //% subcategory="显示器"
     export function setRGBpin(_GPin: DigitalPin, _BPin: DigitalPin, _RPin: DigitalPin): void {
@@ -358,7 +358,7 @@ namespace sensors {
         _Rpins = _RPin
     }
 
-    //% blockId=yledon block="set color pin|r_color %r_color|g_color %g_color|b_color %b_color"   group="三色灯"
+    //% blockId=yledon block="RGB三色灯颜色值|R %r_color|G %g_color|B %b_color"   group="三色灯"
     //% r_color.min=0  r_color.max=255
     //% g_color.min=0  g_color.max=255
     //% b_color.min=0  b_color.max=255
@@ -376,8 +376,8 @@ namespace sensors {
     let rpins = 0
     let gpins = 0
     let ypins = 0
-    //% blockId=setpin block="set light pin|g %GPin|y %YPin|r %RPin"   group="交通灯"
-    //% weight=70
+    //% blockId=setpin block="交通灯引脚|绿(G) %GPin|黄(Y) %YPin|红(R) %RPin"   group="交通灯"
+    //% weight=71
     //% subcategory="显示器"
     export function setpin(GPin: DigitalPin, YPin: DigitalPin, RPin: DigitalPin): void {
         gpins = GPin
@@ -385,7 +385,7 @@ namespace sensors {
         rpins = RPin
     }
 
-    //% blockId=selectlight block="set light pin  %selectpin|light %_status"   group="交通灯"
+    //% blockId=selectlight block="交通灯%selectpin|状态 %_status"   group="交通灯"
     //% weight=70
     //% subcategory="显示器"
     export function selectlight(selectpin: _selectlight, _status: ledon_off): void {
@@ -429,7 +429,7 @@ namespace sensors {
         set(d << 4)
     }
 
-    //% block="LcdInit $addr" addr.defl="39"  group="LCD1602显示屏"  
+    //% block="LCD1602显示屏初始化I2C地址(十进制默认为39) $addr" addr.defl="39"  group="LCD1602显示屏"  
     //% subcategory="显示器"
     //% weight=70
     export function i2cLcdInit(addr: number) {
@@ -448,7 +448,7 @@ namespace sensors {
         lcdcmd(0x01)
     }
 
-    //% block="showchar $ch|col $x|row $y"   group="LCD1602显示屏"  
+    //% block="LCD1602显示屏第$y行第$x列显示字符$ch"   group="LCD1602显示屏"  
     //% subcategory="显示器"
     //% weight=69
     export function i2cLcdShowChar(y: number, x: number, ch: string): void {
@@ -464,7 +464,7 @@ namespace sensors {
         lcddat(ch.charCodeAt(0))
     }
 
-    //% block="showNumber $n|col $x|row $y"   group="LCD1602显示屏"  
+    //% block="LCD1602显示屏第$y行第$x列显示数字$n"   group="LCD1602显示屏"  
     //% subcategory="显示器"
     //% weight=68
     export function i2cLcdShowNumber(y: number, x: number, n: number): void {
@@ -476,7 +476,7 @@ namespace sensors {
      * TODO: describe your function here
      * 
      */
-    //% block="showString $s|col $x|row $y"   group="LCD1602显示屏"  
+    //% block="LCD1602显示屏第$y行第$x列显示字符串$s"   group="LCD1602显示屏"  
     //% subcategory="显示器"
     //% weight=67
     export function i2cLcdShowString(y: number, x: number, s: string): void {
@@ -495,7 +495,7 @@ namespace sensors {
         }
     }
 
-    //% block="i2cLcdDisplay_Control %item"   group="LCD1602显示屏"  
+    //% block="LCD1602显示屏 %item显示"   group="LCD1602显示屏"  
     //% subcategory="显示器"
     //% weight=64
     export function i2cLcdDisplay_Control(item: Item): void {
@@ -512,8 +512,8 @@ namespace sensors {
 
 
     //% subcategory="显示器"   group="LCD1602显示屏"
-    //%  blockId=seti2cLcdBacklight block="Backlight switch control %backlight"
-    //% weight=79
+    //%  blockId=seti2cLcdBacklight block="LCD1602显示屏背光灯%backlight"
+    //% weight=63
     export function seti2cLcdBacklight(backlight: LcdBacklight): void {
         if (backlight == 1) {
             BK = 8
@@ -610,7 +610,7 @@ namespace sensors {
          * set TM1637 intensity, range is [0-8], 0 is off.
          * @param val the brightness of the TM1637, eg: 7
          */
-        //% blockId="TM1637_set_intensity" block="%tm| set intensity %val"  group="TM1637数码管"
+        //% blockId="TM1637数码管%tm设置亮度 %val" block="%tm| set intensity %val"  group="TM1637数码管"
         //% weight=88 
         //% parts="TM1637"
         //% subcategory="显示器"
@@ -645,7 +645,7 @@ namespace sensors {
          * @param num number will show, eg: 5
          * 
          */
-        //% blockId="TM1637_showbit" block="%tm| show digit %num |at %bit"  group="TM1637数码管"
+        //% blockId="TM1637_showbit" block="TM1637数码管%tm第 %bit 位显示数字 %num"  group="TM1637数码管"
         //% weight=90 blockGap=8
         //% parts="TM1637"
         //% bit.max=3 bit.min=0
@@ -659,7 +659,7 @@ namespace sensors {
           * show a number. 
           * @param num is a number, eg: 0
           */
-        //% blockId="TM1637_shownum" block="%tm| show number %num"  group="TM1637数码管"
+        //% blockId="TM1637_shownum" block="TM1637数码管显示数字 %num"  group="TM1637数码管"
         //% weight=91 blockGap=8
         //% parts="TM1637"
         //% subcategory="显示器"
@@ -679,7 +679,7 @@ namespace sensors {
           * show a hex number. 
           * @param num is a hex number, eg: 0
           */
-        //% blockId="TM1637_showhex" block="%tm| show hex number %num"   group="TM1637数码管"
+        //% blockId="TM1637_showhex" block="TM1637数码管%tm显示十六进制数%num"   group="TM1637数码管"
         //% weight=90 blockGap=8
         //% parts="TM1637"
         //% subcategory="显示器"
@@ -700,7 +700,7 @@ namespace sensors {
          * @param bit is the position,eg: 0
          * 
          */
-        //% blockId="TM1637_showDP" block="%tm| DotPoint at %bit|show %_status"  group="TM1637数码管"
+        //% blockId="TM1637_showDP" block="TM1637数码管%tm%show第 %bit 位的点"  group="TM1637数码管"
         //% weight=70 blockGap=8
         //% parts="TM1637"
         //% subcategory="显示器"
@@ -745,7 +745,7 @@ namespace sensors {
     }
 
     //% weight=99 
-    //% blockId="TM1637_create" block="CLK %clk|DIO %dio|intensity %intensity|LED count %count"  group="TM1637数码管"
+    //% blockId="TM1637_create" block="TM1637数码管CLK引脚%clk DIO引脚%dio亮度%intensity数码管数量(1~4)%count"  group="TM1637数码管"
     //% inlineInputMode=inline
     //% subcategory="显示器"
     //% intensity.max=8 intensity.min=0
@@ -801,7 +801,7 @@ namespace sensors {
     //     dat(3, 0)
     //     dbuf = [0, 0, 0, 0]
     // }
-    //% blockId="TM650_Control" block="display control" group="TM1650数码管"
+    //% blockId="TM650_Control" block="TM1650数码管%option显示" group="TM1650数码管"
     //% weight=40 blockGap=8
     //% subcategory="显示器"
     export function TM650_Control(option: Select) {
@@ -821,7 +821,7 @@ namespace sensors {
         }
     }
 
-    //% blockId="TM650_DIGIT" block="show digit %num|at %bit"  group="TM1650数码管"
+    //% blockId="TM650_DIGIT" block="TM1650数码管第%bit位显示数字%num"  group="TM1650数码管"
     //% weight=80 blockGap=8
     //% num.max=15 num.min=0
     //% subcategory="显示器"
@@ -831,7 +831,7 @@ namespace sensors {
         dat(bit, _SEG[num % 16])
     }
 
-    //% blockId="TM650_SHOW_NUMBER" block="show number %num"  group="TM1650数码管"
+    //% blockId="TM650_SHOW_NUMBER" block="TM1650数码管显示数字 %num"  group="TM1650数码管"
     //% weight=100 blockGap=8
     //% subcategory="显示器"
     export function showNumber(num: number) {
@@ -846,7 +846,7 @@ namespace sensors {
         digit(Math.idiv(num, 100) % 10, 1)
     }
 
-    //% blockId="TM650_SHOW_HEX_NUMBER" block="show hex number %num"  group="TM1650数码管"
+    //% blockId="TM650_SHOW_HEX_NUMBER" block="TM1650数码管显示十六进制数据%num"  group="TM1650数码管"
     //% weight=90 blockGap=8
     //% subcategory="显示器"
     export function showHex(num: number) {
@@ -861,7 +861,7 @@ namespace sensors {
         digit((num >> 8) % 16, 1)
     }
 
-    //% blockId="TM650_SHOW_DP" block="show dot point %bit|show %num" group="TM1650数码管"
+    //% blockId="TM650_SHOW_DP" block="TM1650数码管%show第%bit位的点" group="TM1650数码管"
     //% weight=80 blockGap=8
     //% subcategory="显示器"
     //% bit.max=3 bit.min=0
@@ -871,7 +871,7 @@ namespace sensors {
         else dat(bit, dbuf[bit % 4] & 0x7F)
     }
 
-    //% blockId="TM650_INTENSITY" block="set intensity %dat" group="TM1650数码管"
+    //% blockId="TM650_INTENSITY" block="TM1650数码管设置亮度 %dat" group="TM1650数码管"
     //% weight=70 blockGap=8
     //% subcategory="显示器"
     //% dat.max=7 dat.min=0
@@ -889,7 +889,7 @@ namespace sensors {
         }
     }
 
-    //% blockId=touchbutton block="touch |digital pin %pin"   group="触摸按键"
+    //% blockId=touchbutton block="引脚%pin检测到触摸？"   group="触摸按键"
     //% weight=70
     //% subcategory="基础输入模块"
     export function touchButton(pin: DigitalPin): boolean {
@@ -901,7 +901,7 @@ namespace sensors {
         }
     }
 
-    //% blockId=button block="Button |digital pin %pin"   group="按键开关"
+    //% blockId=button block="引脚%pin检测到按键被按下？"   group="按键开关"
     //% weight=70
     //% subcategory="基础输入模块"
     export function Button(pin: DigitalPin): boolean {
@@ -913,7 +913,7 @@ namespace sensors {
         }
     }
 
-    //% blockId=crashbutton block="crashButton |digital pin %pin"   group="碰撞开关"
+    //% blockId=crashbutton block="引脚%pin检测到碰撞？"   group="碰撞开关"
     //% weight=70
     //% subcategory="基础输入模块"
     export function crashButton(pin: DigitalPin): boolean {
@@ -925,7 +925,7 @@ namespace sensors {
         }
     }
 
-    //% blockId=slideRheostat block="slideRheostat |analog pin %pin"   group="滑动变阻器"
+    //% blockId=slideRheostat block="引脚%pin获取滑动变阻器的模拟值"   group="滑动变阻器"
     //% weight=70
     //% subcategory="基础输入模块"
     export function slideRheostat(pin: AnalogPin): number {
@@ -933,7 +933,7 @@ namespace sensors {
         return row
     }
 
-    //% blockId=rotaryPotentiometer block="rotaryPotentiometer |analog pin %pin" group="旋转电位器"
+    //% blockId=rotaryPotentiometer block="引脚%pin获取旋转电位器的模拟值" group="旋转电位器"
     //% weight=70
     //% subcategory="基础输入模块"
     export function rotaryPotentiometer(pin: AnalogPin): number {
@@ -979,7 +979,7 @@ namespace sensors {
     let Ypin = 0
     let Bpin = 0
 
-    //% blockId=rockerPin block="rockerPin setup | pinX %pinx|pinY %piny|pinB %pinb" group="摇杆模块"
+    //% blockId=rockerPin block="摇杆模块引脚X%pinx引脚Y%piny引脚B%pinb" group="摇杆模块"
     //% weight=70
     //% subcategory="基础输入模块"
     export function rockerPin(pinx: AnalogPin, piny: AnalogPin, pinb: DigitalPin): void {
@@ -988,7 +988,7 @@ namespace sensors {
         Bpin = pinb
     }
 
-    //% blockId=_analogRead block="select analog pin  %selectpin" group="摇杆模块"
+    //% blockId=_analogRead block="摇杆模块%selectpin获取模拟值" group="摇杆模块"
     //% weight=69
     //% subcategory="基础输入模块"
     export function _analogRead(selectpin: _rockerpin): number {
@@ -1000,7 +1000,7 @@ namespace sensors {
         return pins.analogReadPin(a)
     }
 
-    //% blockId=_digitalRead block="Is the rocker module pressed?" group="摇杆模块"
+    //% blockId=_digitalRead block="摇杆模块按键被按下？" group="摇杆模块"
     //% weight=68
     //% subcategory="基础输入模块"
     export function _digitalRead(): boolean {
@@ -1015,7 +1015,7 @@ namespace sensors {
     let _DIO = 0
     let _CLK = 0
 
-    //% blockId=basic_piano_pin block="basic_piano_pin |DIO pin %DIO|CLK pin %CLK"   group="钢琴模块"
+    //% blockId=basic_piano_pin block="钢琴模块引脚 DIO %DIO CLK %CLK"   group="钢琴模块"
     //% weight=70
     //% subcategory="基础输入模块"
     export function basic_piano_pin(DIO: DigitalPin, CLK: DigitalPin): void {
@@ -1024,7 +1024,7 @@ namespace sensors {
         _CLK = CLK
     }
 
-    //% blockId=basic_piano_play block="basic_piano_play"   group="钢琴模块"
+    //% blockId=basic_piano_play block="弹奏钢琴"   group="钢琴模块"
     //% weight=69
     //% subcategory="基础输入模块"
     export function basic_piano_play(): void {
@@ -1063,7 +1063,7 @@ namespace sensors {
 
 
 
-    //% blockId=sensor_water block="Water vapor sensor pin %pines"  group="水蒸气传感器"
+    //% blockId=sensor_water block="水蒸气传感器引脚 %pines 读取值"  group="水蒸气传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
@@ -1073,7 +1073,7 @@ namespace sensors {
     }
 
 
-    //% blockId=sensor_temperature block="Pin %pin reads the analog value of the LM35"  group="LM35温度传感器"
+    //% blockId=sensor_temperature block="LM35引脚%pin获取环境温度"  group="LM35温度传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
@@ -1083,7 +1083,7 @@ namespace sensors {
 
     }
 
-    //% blockId=sensor_flame block="Pin %pin reads the digital value of the flame sensor" group="火焰传感器"
+    //% blockId=sensor_flame block="引脚%pin检测到火焰？" group="火焰传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
@@ -1096,7 +1096,7 @@ namespace sensors {
         }
     }
 
-    //% blockId=sensor_flame_analog block="Pin %pin reads the analog value of the flame sensor" group="火焰传感器"
+    //% blockId=sensor_flame_analog block="引脚%pin读取火焰的模拟值" group="火焰传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
@@ -1104,7 +1104,7 @@ namespace sensors {
         return pins.analogReadPin(pin)
     }
 
-    //% blockId=sensor_infraredTracking block="Pin %pin reads the digital value of the infraredTracking sensor" group="红外寻迹传感器"
+    //% blockId=sensor_infraredTracking block="引脚%pin检测到黑线？" group="红外寻迹传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
@@ -1117,7 +1117,7 @@ namespace sensors {
         }
     }
 
-    //% blockId=sensor_incline block="sensor_incline pin |digitalpin %pin" group="倾斜传感器"
+    //% blockId=sensor_incline block="引脚%pin检测到倾斜？" group="倾斜传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
@@ -1136,7 +1136,7 @@ namespace sensors {
      * 光敏传感器
      */
 
-    //% blockId=sensor_illumination block="sensor_illumination pin |analogpin %pin" group="光敏传感器"
+    //% blockId=sensor_illumination block="引脚%pin获取光照强度模拟值" group="光敏传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
@@ -1148,7 +1148,7 @@ namespace sensors {
      * 热敏传感器
      */
 
-    //% blockId=sensor_thermosensitive block="sensor_thermosensitive pin |analogpin %pin" group="热敏传感器"
+    //% blockId=sensor_thermosensitive block="引脚%pin获取热度模拟值" group="热敏传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
@@ -1160,7 +1160,7 @@ namespace sensors {
      * 水位传感器
      */
 
-    //% blockId=sensor_waterLevel block="sensor_waterLevel pin |analogpin %pin" group="水位传感器"
+    //% blockId=sensor_waterLevel block="引脚%pin获取水位模拟值" group="水位传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
@@ -1172,7 +1172,7 @@ namespace sensors {
      * 土壤湿度传感器
      */
 
-    //% blockId=sensor_soilMoisture block="sensor_soilMoisture pin |analogpin %pin"  group="土壤湿度传感器"
+    //% blockId=sensor_soilMoisture block="s引脚%pin获取土壤湿度模拟值"  group="土壤湿度传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
@@ -1184,7 +1184,7 @@ namespace sensors {
      * 避障传感器
      */
 
-    //% blockId=sensor_obstacleAvoid block="sensor_obstacleAvoid pin |digitalpin %pin" group="避障传感器"
+    //% blockId=sensor_obstacleAvoid block="引脚%pin检测到前方有障碍物？" group="避障传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
@@ -1202,7 +1202,7 @@ namespace sensors {
      * 磁簧开关传感器
      */
 
-    //% blockId=sensor_reedSwitch block="sensor_reedSwitch pin |digitalpin %pin" group="磁簧开关传感器"
+    //% blockId=sensor_reedSwitch block="引脚%pin检测到磁场？" group="磁簧开关传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
@@ -1219,7 +1219,7 @@ namespace sensors {
      * 人体热释电传感器
      */
 
-    //% blockId=sensor_humanBody block="sensor_humanBody pin |digitalpin %pin" group="人体热释电传感器"
+    //% blockId=sensor_humanBody block="引脚%pin检测到人体热源？" group="人体热释电传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
@@ -1236,7 +1236,7 @@ namespace sensors {
      * 震动传感器
      */
 
-    //% blockId=sensor_quake block="sensor_quake pin |digitalpin %pin" group="震动传感器"
+    //% blockId=sensor_quake block="引脚%pin检测到震动？" group="震动传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
@@ -1253,7 +1253,7 @@ namespace sensors {
      * 震动传感器
      */
 
-    //% blockId=sensor_quake_analog block="sensor_quake pin |digitalpin %pin" group="震动传感器"
+    //% blockId=sensor_quake_analog block="引脚%pin获取震动模拟值" group="震动传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
@@ -1265,7 +1265,7 @@ namespace sensors {
      * 灰度传感器
      */
 
-    //% blockId=sensor_grayLevel block="sensor_grayLevel pin |analogpin %pin" group="灰度传感器"
+    //% blockId=sensor_grayLevel block="引脚%pin获取灰度模拟值" group="灰度传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
@@ -1276,7 +1276,7 @@ namespace sensors {
     /**
      * 声音传感器
      */
-    //% blockId=sensor_sound_analogread  block="Pin %pin reads the analog value of the sound sensor" group="声音传感器"
+    //% blockId=sensor_sound_analogread  block="引脚%AS获取声音的模拟值" group="声音传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
@@ -1285,7 +1285,7 @@ namespace sensors {
 
     }
 
-    //% blockId=sensor_sound_digitalread  block="Pin %pin reads the digital value of the sound sensor" group="声音传感器"
+    //% blockId=sensor_sound_digitalread  block="引脚%DS检测到声音？" group="声音传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
@@ -1301,21 +1301,21 @@ namespace sensors {
     /**
      * 雨滴传感器
      */
-    //% blockId=sensor_rain_analogread  block="Pin %pin reads the analog value of the rain sensor"  group="雨滴传感器"
+    //% blockId=sensor_rain_analogread  block="引脚%pin获取雨滴的模拟值"  group="雨滴传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
-    export function sensor_rain_analogread(_DR: AnalogPin): number {
-        return pins.analogReadPin(_DR)
+    export function sensor_rain_analogread(pin: AnalogPin): number {
+        return pins.analogReadPin(pin)
     }
 
     //% blockId=sensor_rain_digitalread  block="Pin %pin reads the digital value of the rain sensor"   group="雨滴传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
-    export function sensor_rain_digitalread(_DR: DigitalPin): boolean {
+    export function sensor_rain_digitalread(pin: DigitalPin): boolean {
       //  pins.digitalWritePin(_DR, 0)
-        if (pins.digitalReadPin(_DR) == 1) {
+        if (pins.digitalReadPin(pin) == 1) {
             return false;
         } else {
             return true;
@@ -1325,21 +1325,21 @@ namespace sensors {
     /**
      * 气体传感器
      */
-    //% blockId=sensor_gas_analogread  block="Pin %pin reads the analog value of the MQ4-gas sensor"  group="气体传感器"
+    //% blockId=sensor_gas_analogread  block="引脚%pin获取到气体的模拟值"  group="气体传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
-    export function sensor_gas_analogread(_AG: AnalogPin): number {
-        return pins.analogReadPin(_AG)
+    export function sensor_gas_analogread(pin: AnalogPin): number {
+        return pins.analogReadPin(pin)
     }
 
-    //% blockId=sensor_gas_digitalread  block="Pin %pin reads the digital value of the MQ4-gas sensor"  group="气体传感器"
+    //% blockId=sensor_gas_digitalread  block="引脚%pin检测到气体？"  group="气体传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
-    export function sensor_gas_digitalread(_DG: DigitalPin): boolean {
+    export function sensor_gas_digitalread(pin: DigitalPin): boolean {
       //  pins.digitalWritePin(_DG, 0)
-        if (pins.digitalReadPin(_DG) == 1) {
+        if (pins.digitalReadPin(pin) == 1) {
             return true;
         } else {
             return false;
@@ -1356,7 +1356,7 @@ namespace sensors {
      * Get RUS04 distance
      * @param pin Microbit ultrasonic pin; eg: P2
     */
-    //% blockId=Ultrasonic block="Read RgbUltrasonic Distance at pin %pin(cm)"  group="RGB超声波"
+    //% blockId=Ultrasonic block="RGB超声波引脚%pin获取前方距离(cm)"  group="RGB超声波"
     //% weight=76
     //% inlineInputMode=inline
     //% subcategory="传感器"
@@ -1473,8 +1473,8 @@ namespace sensors {
         }
     }
 
-    //% blockId="sensorbit_rus04" block="part %index show color %rgb effect %effect rgbpin %pin"  group="RGB超声波"
-    //% weight=75
+    //% blockId="sensorbit_rus04" block="RGB超声波引脚%pin选择彩灯%index选择颜色%rgb选择效果%effect"  group="RGB超声波"
+    //% weight=77
     //% inlineInputMode=inline
     //% subcategory="传感器"
     export function sensorbit_rus04(pin: DigitalPin, index: RgbUltrasonics, rgb: RgbColors, effect: ColorEffect): void {
@@ -1488,7 +1488,7 @@ namespace sensors {
      * @param unit desired conversion unit
      * @param maxCmDistance maximum distance in centimeters (default is 500)
      */
-    //% blockId="sensor_ping" block="ping trig %trig|echo %echo|unit %unit" group="普通超声波"
+    //% blockId="sensor_ping" block="普通超声波trig引脚 %trig |echo引脚 %echo 获取距离|单位 %unit" group="普通超声波"
     //% weight=75
     //% inlineInputMode=inline
     //% subcategory="传感器"
@@ -1511,7 +1511,7 @@ namespace sensors {
         }
     }
 
-    //% blockId="readdht11" block="value of dht11 %dht11type at pin %dht11pin"  group="温湿度传感器"
+    //% blockId="readdht11" block="温湿度传感器DHT11引脚 %dht11pin 获取温湿度传感器的 %dht11type"  group="温湿度传感器"
     //% subcategory="传感器"
     //% inlineInputMode=inline
     export function dht11value(dht11pin: DigitalPin, dht11type: DHT11Type): number {
@@ -1569,7 +1569,7 @@ namespace sensors {
 /**
      * 循迹传感器
      */
-    //% blockId=sensor_tracking block="sensor_tracking pin |digitalpin %pin"  group="循迹传感器"
+    //% blockId=sensor_tracking block="引脚 %pin 检测到黑线？"  group="循迹传感器"
     //% weight=74
     //% subcategory="传感器"
     //% inlineInputMode=inline
@@ -1589,7 +1589,7 @@ namespace sensors {
       /**
        * 四路循迹传感器初始化
        */
-      //% blockId=four_sensor_tracking block="four_sensor_tracking pin1 |digitalpin %pin1 pin2 |digitalpin %pin2 |pin3 |digitalpin %pin3 |pin4 |digitalpin %pin4"  group="循迹传感器"
+      //% blockId=four_sensor_tracking block="四路循迹传感器引脚OUT0|%pin1|引脚OUT1|%pin2|引脚OUT2|%pin3|引脚OUT3|%pin4"  group="循迹传感器"
       //% inlineInputMode=inline
       //% weight=73
       //% subcategory="传感器"
@@ -1600,7 +1600,7 @@ namespace sensors {
         outPin4 = pin4;
       }
       
-      //% blockId=four_sensor_trackingValue block="four_sensor_tracking get sensor value"  group="循迹传感器"
+      //% blockId=four_sensor_trackingValue block="四路循迹传感器获取的值"  group="循迹传感器"
       //% inlineInputMode=inline
       //% weight=72
       //% subcategory="传感器"
@@ -1633,7 +1633,7 @@ namespace sensors {
         return result;
       }
 
-            //% blockId="dht11value_v2" block="value of dht11 %dht11type at pin %dht11pin"  group="温湿度传感器"
+	//% blockId="dht11value_v2" block="温湿度传感器DHT11引脚 %dht11pin 获取温湿度传感器的 %dht11type"  group="温湿度传感器"
     //% subcategory="micro:bit(V2)"
     //% inlineInputMode=inline
     export function dht11value_v2(dht11pin: DigitalPin, dht11type: DHT11Type): number {
@@ -1728,7 +1728,7 @@ namespace sensors {
     /**
      * 游戏手柄
      */
-    //% blockId=Gamepad_Press block="Gamepad buttons %button Is pressed？"  group="游戏手柄"
+    //% blockId=Gamepad_Press block="游戏手柄按键 %button 是否被按下？"  group="游戏手柄"
     //% weight=74
     //% subcategory="基础输入模块"
     //% inlineInputMode=inline
@@ -1743,7 +1743,7 @@ namespace sensors {
     /**
      * 游戏手柄
      */
-    //% blockId=Gamepad_Release block="Gamepad buttons %button Is Released？"  group="游戏手柄"
+    //% blockId=Gamepad_Release block="游戏手柄按键 %button 是否被释放？"  group="游戏手柄"
     //% weight=74
     //% subcategory="基础输入模块"
     //% inlineInputMode=inline
@@ -1758,7 +1758,7 @@ namespace sensors {
     /**
      * 游戏手柄
      */
-    //% blockId=Gamepad_Shaft block="Game controller acquisition %shaft the value of"  group="游戏手柄"
+    //% blockId=Gamepad_Shaft block="游戏手柄获取 %shaft 的值"  group="游戏手柄"
     //% weight=74
     //% subcategory="基础输入模块"
     //% inlineInputMode=inline
@@ -1776,7 +1776,7 @@ namespace sensors {
     /**
      * 游戏手柄
      */
-    //% blockId=Gamepad_Status block="Button %button is it %status status?"  group="游戏手柄"
+    //% blockId=Gamepad_Status block="游戏手柄按键 %button 是否是 %status 状态"  group="游戏手柄"
     //% weight=74
     //% subcategory="基础输入模块"
     //% inlineInputMode=inline
@@ -1968,7 +1968,7 @@ namespace sensors {
      * @param x is X alis, eg: 0
      * @param y is Y alis, eg: 0
      */
-    //% blockId=OLED12864_I2C_PIXEL block="Display pixels x %x|y %y" group="OLED"
+    //% blockId=OLED12864_I2C_PIXEL block="OLED显示像素 x %x|y %y"" group="OLED"
     //% subcategory="显示器"
     //% weight=70 blockGap=8
     export function OLED12864_I2C_PIXEL(x: number, y: number) {
@@ -1997,7 +1997,7 @@ namespace sensors {
      * @param y is Y alis, eg: 0
      * @param s is the text will be show, eg: 'Hello!'
      */
-    //% blockId=OLED12864_I2C_SHOWSTRING block="Display text x %x|y %y|text %s" group="OLED"
+    //% blockId=OLED12864_I2C_SHOWSTRING block="OLED显示文字 x %x|y %y|文字 %s" group="OLED"
     //% subcategory="显示器"
     //% weight=80 blockGap=8
     export function OLED12864_I2C_SHOWSTRING(x: number, y: number, s: string) {
@@ -2033,7 +2033,7 @@ namespace sensors {
      * @param y is Y alis, eg: 0
      * @param num is the number will be show, eg: 12
      */
-    //% blockId=OLED12864_I2C_NUMBER block="Display number x %x|y %y|number %num" group="OLED"
+    //% blockId=OLED12864_I2C_NUMBER block="OLED显示数字 x %x|y %y|数字 %num" group="OLED"
     //% subcategory="显示器"
     //% weight=80 blockGap=8
     export function OLED12864_I2C_NUMBER(x: number, y: number, num: number) {
@@ -2046,7 +2046,7 @@ namespace sensors {
      * @param y is Y alis, eg: 0
      * @param len is the length of line, eg: 10
      */
-    //% blockId=OLED12864_I2C_HLINE block="Draw horizontal line segment x %x|y %y|length %len" group="OLED"
+    //% blockId=OLED12864_I2C_HLINE block="OLED制水平线段 x %x|y %y|长度 %len" group="OLED"
     //% subcategory="显示器"
     //% weight=71 blockGap=8
     //% x.min=0 x.max=60
@@ -2065,7 +2065,7 @@ namespace sensors {
      * @param y is Y alis, eg: 0
      * @param len is the length of line, eg: 10
      */
-    //% blockId=OLED12864_I2C_VLINE block="Draw vertical line segments x %x|y %y|length %len" group="OLED"
+    //% blockId=OLED12864_I2C_VLINE block="OLED绘制垂直线段 x %x|y %y|长度 %len" group="OLED"
     //% subcategory="显示器"
     //% weight=72 blockGap=8
     //% x.min=0 x.max=60
@@ -2087,7 +2087,7 @@ namespace sensors {
      * @param x2 is X alis, eg: 60
      * @param y2 is Y alis, eg: 30
      */
-    //% blockId=OLED12864_I2C_RECT block="Draw rectangle x1 %x1|y1 %y1|x2 %x2|y2 %y2" group="OLED"
+    //% blockId=OLED12864_I2C_RECT block="OLED绘制矩形 x1 %x1|y1 %y1|x2 %x2|y2 %y2" group="OLED"
     //% subcategory="显示器"
     //% weight=73 blockGap=8
     //% x1.min=0 x1.max=60
@@ -2124,7 +2124,7 @@ namespace sensors {
     /**
      * 清除 OLED 模块的显示内容
      */
-    //% blockId=OLED12864_I2C_CLEAR block="Clear display" group="OLED"
+    //% blockId=OLED12864_I2C_CLEAR block="OLED清除显示内容" group="OLED"
     //% subcategory="显示器"
     //% weight=63 blockGap=8
     export function OLED12864_I2C_CLEAR() {
@@ -2141,7 +2141,7 @@ namespace sensors {
     /**
      * 打开 OLED 模块的屏幕显示
      */
-    //% blockId=OLED12864_I2C_ON block="Show on" group="OLED"
+    //% blockId=OLED12864_I2C_ON block="打开显示" group="OLED"
     //% subcategory="显示器"
     //% weight=62 blockGap=8
     export function OLED12864_I2C_ON() {
@@ -2151,7 +2151,7 @@ namespace sensors {
     /**
      * 关闭 OLED 模块的屏幕显示
      */
-    //% blockId=OLED12864_I2C_OFF block="Display off" group="OLED"
+    //% blockId=OLED12864_I2C_OFF block="关闭显示" group="OLED"
     //% subcategory="显示器"
     //% weight=61 blockGap=8
     export function OLED12864_I2C_OFF() {
@@ -2162,7 +2162,7 @@ namespace sensors {
     /**
      * OLED 初始化
      */
-    //% blockId=OLED12864_I2C_init block="Initialize OLED" group="OLED"
+    //% blockId=OLED12864_I2C_init block="初始化OLED" group="OLED"
     //% subcategory="显示器"
     //% weight=100 blockGap=8
     export function OLED12864_I2C_init() {
