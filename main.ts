@@ -218,7 +218,7 @@ enum Shaft{
 }
 
 
-//% color="#FFA500" weight=10 icon="\uf2c9" block="Sensor:bit"
+//% color="#FFA500" weight=10 icon="\uf2c9" block="Sensor扩展板"
 namespace sensors {
     //% blockId=actuator_buzzer0 block="有源蜂鸣器引脚%pin|状态 %status"   group="有源蜂鸣器"
     //% weight=70
