@@ -610,7 +610,7 @@ namespace sensors {
          * set TM1637 intensity, range is [0-8], 0 is off.
          * @param val the brightness of the TM1637, eg: 7
          */
-        //% blockId="TM1637数码管%tm设置亮度 %val" block="%tm| set intensity %val"  group="TM1637数码管"
+        //% blockId="TM1637_set_intensity" block="TM1637数码管%tm设置亮度 %val"  group="TM1637数码管"
         //% weight=88 
         //% parts="TM1637"
         //% subcategory="显示器"
@@ -712,7 +712,7 @@ namespace sensors {
             else this._dat(bit, this.buf[bit] & 0x7F)
         }
 
-        //% blockId="TM1637_clear" block="clear %tm"  group="TM1637数码管"
+        //% blockId="TM1637_clear" block="%tm清除显示"  group="TM1637数码管"
         //% weight=80 blockGap=8
         //% parts="TM1637"
         //% subcategory="显示器"
@@ -723,7 +723,7 @@ namespace sensors {
             }
         }
 
-        //% blockId="TM1637_on" block="turn on %tm"  group="TM1637数码管"
+        //% blockId="TM1637_on" block="%tm打开显示"  group="TM1637数码管"
         //% weight=86 blockGap=8
         //% parts="TM1637"
         //% subcategory="显示器"
@@ -733,7 +733,7 @@ namespace sensors {
             this._write_dsp_ctrl()
         }
 
-        //% blockId="TM1637_off" block="turn off %tm"  group="TM1637数码管"
+        //% blockId="TM1637_off" block="%tm关闭显示"  group="TM1637数码管"
         //% weight=85 blockGap=8
         //% parts="TM1637"
         //% subcategory="显示器"
@@ -1309,7 +1309,7 @@ namespace sensors {
         return pins.analogReadPin(pin)
     }
 
-    //% blockId=sensor_rain_digitalread  block="Pin %pin reads the digital value of the rain sensor"   group="雨滴传感器"
+    //% blockId=sensor_rain_digitalread  block="引脚%DR雨滴传感器检测到雨滴?"   group="雨滴传感器"
     //% weight=70
     //% inlineInputMode=inline
     //% subcategory="传感器"
