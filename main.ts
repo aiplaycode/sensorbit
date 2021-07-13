@@ -659,7 +659,7 @@ namespace sensors {
           * show a number. 
           * @param num is a number, eg: 0
           */
-        //% blockId="TM1637_shownum" block="TM1637数码管显示数字 %num"  group="TM1637数码管"
+        //% blockId="TM1637_shownum" block="TM1637数码管%tm显示数字 %num"  group="TM1637数码管"
         //% weight=91 blockGap=8
         //% parts="TM1637"
         //% subcategory="显示器"
