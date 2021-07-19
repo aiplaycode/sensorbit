@@ -1391,12 +1391,12 @@ namespace sensors {
         emRGBLight.show();
     }
 
-    export function rus04_rgb(pin: DigitalPin, offset: number, index: number, rgb: number, effect: number): void {
+     export function rus04_rgb(pin: DigitalPin, offset: number, index: number, rgb: number, effect: number): void {
         let start = 0, end = 0;
         if (!emRGBLight) {
-            emRGBLight = EMRGBLight.create(pin, offset+6, EMRGBPixelMode.RGB)
+            emRGBLight = EMRGBLight.create(pin, 10, EMRGBPixelMode.RGB)
         }
-        if(offset>=4){
+        //if(offset >= 4 || offset == 0){
             if (index == RgbUltrasonics.Left) {
                 start = 0;
                 end = 2;
@@ -1407,11 +1407,12 @@ namespace sensors {
                 start = 0;
                 end = 5;
             }
-        }
+       // }
         start += offset;
         end += offset;
         switch (effect) {
             case ColorEffect.None:
+                emRGBLight.setBrightness(255);
                 RgbDisplay(start, end, rgb);
                 break;
             case ColorEffect.Breathing:
@@ -1419,15 +1420,16 @@ namespace sensors {
                     emRGBLight.setBrightness(i);
                     RgbDisplay(start, end, rgb);
                     //basic.pause((255 - i)/2);
-                    basic.pause((i < 20) ? 80 : (255 / i));
+                    basic.pause((i < 50) ? 10 : (255 / i));
                 }
                 for (let i = 255; i > 0; i -= 2) {
                     emRGBLight.setBrightness(i);
                     RgbDisplay(start, end, rgb);
-                    basic.pause((i < 20) ? 80 : (255 / i));
+                    basic.pause((i < 50) ? 10 : (255 / i));
                 }
                 break;
             case ColorEffect.Rotate:
+                emRGBLight.setBrightness(255);
                 for (let i = 0; i < 4; i++) {
                     emRGBLight.setPixelColor(start, rgb);
                     emRGBLight.setPixelColor(start + 1, 0);
@@ -1459,15 +1461,17 @@ namespace sensors {
                     }
                     emRGBLight.show();
                     basic.pause(150);
+                    emRGBLight.setBrightness(0);
                 }
                 RgbDisplay(4, 9, 0);
                 break;
             case ColorEffect.Flash:
-                for (let i = 0; i < 6; i++) {
+                for (let i = 0; i < 3; i++) {
+                    emRGBLight.setBrightness(255);
                     RgbDisplay(start, end, rgb);
-                    basic.pause(150);
+                    basic.pause(100);
                     RgbDisplay(start, end, 0);
-                    basic.pause(150);
+                    basic.pause(50);
                 }
                 break;
         }
